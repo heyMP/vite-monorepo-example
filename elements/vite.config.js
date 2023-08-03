@@ -1,24 +1,22 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 /** @type {import('vite').UserConfig} */
-export default defineConfig({
+export default ({
   build: {
     minify: false,
     terserOptions: false,
-    // target: 'es2020',
     target: false,
     lib: {
       entry: [
-        resolve(__dirname, 'elements/index.ts'),
-        resolve(__dirname, 'elements/rhpt-dialog.ts'),
-        resolve(__dirname, 'elements/rhpt-link.ts')
+        resolve(__dirname, 'src/index.ts'),
+        resolve(__dirname, 'src/rhpt-dialog.ts'),
+        resolve(__dirname, 'src/rhpt-link.ts')
       ],
       formats: ['es'],
     },
     rollupOptions: {
+      treeshake: false,
       output: {
         minifyInternalExports: false
       },

@@ -1,0 +1,19 @@
+{
+  "name": "@heymp/sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@heymp/elements": "1.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.8"
+  }
+}
